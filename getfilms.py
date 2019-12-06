@@ -29,11 +29,7 @@ def _parseresponce(html):
 
     return links
 
-
-if __name__ == "__main__":
-    # this just for testing without the UI
-    film = input("FILM >>> ")
-    resp = _makerequest(url % (film))
+def getlinks(name):
+    resp = _makerequest(url % (name))
     links = _parseresponce(resp)
-
-    print(links)
+    return links
