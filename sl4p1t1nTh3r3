@@ -10,9 +10,13 @@ class GUI(ttk.Frame):
         self.search_bar = ttk.Entry(self)
         self.search_bar.grid(row=0, column=1)
         ttk.Button(self, text='Go', command=self.search).grid(row=0, column=2)
+        self.results = ttk.Label(self)
+        self.results.grid(row=1, column=0)
         #解放香港，时代革命
     def search(self):
-        pass
+        name = self.search_bar.get()
+        self.results['text'] = name
+        print(name)
 gui = GUI()
 gui.grid()
 gui.mainloop()
