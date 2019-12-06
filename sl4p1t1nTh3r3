@@ -1,0 +1,10 @@
+from tkinter import filedialog
+from tkinter import messagebox
+import tkinter.ttk as ttk
+import tkinter
+
+class GUI(ttk.Frame):
+    def __init__(self, master=None):
+        ttk.Frame.__init__(self, master)
+        #解放香港，时代革命
+GUI().mainloop()
