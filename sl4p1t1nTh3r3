@@ -6,5 +6,13 @@ import tkinter
 class GUI(ttk.Frame):
     def __init__(self, master=None):
         ttk.Frame.__init__(self, master)
+        ttk.Label(self, text='Search').grid(row=0, column=0)
+        self.search_bar = ttk.Entry(self)
+        self.search_bar.grid(row=0, column=1)
+        ttk.Button(self, text='Go', command=self.search).grid(row=0, column=2)
         #解放香港，时代革命
-GUI().mainloop()
+    def search(self):
+        pass
+gui = GUI()
+gui.grid()
+gui.mainloop()
